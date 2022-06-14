@@ -17,12 +17,6 @@ refs.input.addEventListener('input', debounce(onInput, DEBOUNCE_DELAY));
 
 function onInput(e) {
   const name = e.target.value.trim();
-  console.log(name);
-  if (name === '') {
-    Notiflix.Notify.warning('Введіть корректне значення');
-    e.target.value = '';
-    return;
-  }
   fetchCountries(name)
     .then(response => {
       if (response.length > 4) {

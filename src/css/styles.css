@@ -24,6 +24,20 @@ body {
   margin-bottom: 16px;
 }
 
+.country-list li {
+  display: flex;
+  font-weight: bold;
+ }
+
+ .country-list li:not(:last-child) {
+   margin-bottom: 8px;
+ }
+
+ .country-list img {
+
+   margin-right: 15px;
+ }
+
 .country-info__header {
   display: flex;
   align-items: center;
