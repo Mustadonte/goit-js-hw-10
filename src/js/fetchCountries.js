@@ -1,5 +1,10 @@
+const API_URL = 'https://restcountries.com/v3.1/name/';
+const searchParams = new URLSearchParams({
+  fields: 'name,capital,population,flags,languages',
+});
+
 export function fetchCountries(name) {
-  return fetch(`https://restcountries.com/v3.1/name/${name}`).then(response => {
+  return fetch(`${API_URL}${name}?${searchParams}`).then(response => {
     return response.json();
   });
 }

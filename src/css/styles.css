@@ -27,6 +27,7 @@ body {
 .country-list li {
   display: flex;
   font-weight: bold;
+
  }
 
  .country-list li:not(:last-child) {
