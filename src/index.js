@@ -19,11 +19,11 @@ function onInput(e) {
   const name = e.target.value.trim();
   fetchCountries(name)
     .then(response => {
-      if (response.length > 4) {
+      if (response.length > 10) {
         Notiflix.Notify.info('Введіть більш точну назву');
         return;
       }
-      if (response.length > 1 && response.length <= 4) {
+      if (response.length > 1 && response.length <= 10) {
         const listMarkup = countryListMarkup(response);
         console.log(response);
         refs.serchQuery.insertAdjacentHTML('beforeend', listMarkup);

@@ -5,6 +5,10 @@ const searchParams = new URLSearchParams({
 
 export function fetchCountries(name) {
   return fetch(`${API_URL}${name}?${searchParams}`).then(response => {
-    return response.json();
+    if (!response.ok) {
+      throw Error(console.log('Помилка 404'));
+    } else {
+      return response.json();
+    }
   });
 }
